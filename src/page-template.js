@@ -1,4 +1,6 @@
-
+function pageBuilder(data){
+    return `
+    
 <!DOCTYPE html>
 
 <html>
@@ -23,13 +25,15 @@
               <div class="col-sm p-3 m-3">
                 <div class="card">
                   <div class="card-body">
-                      <h5 class="card-title"></h5>
-                      <p class="card-text"></p>
+                      <h5 class="card-title">${data.name}</h5>
+                      <p class="card-text">${data.role}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"></li>
-                      <li class="list-group-item"><a href="mailto:"</a></li>
-                      <li class="list-group-item"></li>
+                      <li class="list-group-item">${data.id}</li>
+                      <li class="list-group-item">${data.email}<a href="mailto:"</a></li>
+                      <li class="list-group-item">${data.github}</li>
+                      <li class="list-group-item">${data.officeNumber}</li>
+                      <li class="list-group-item">${data.school}</li>
                     </ul>
                 </div>
               </div>
@@ -44,3 +48,5 @@
     </body>
 </html>
     
+    `
+}
