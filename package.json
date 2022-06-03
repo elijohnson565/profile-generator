@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elijohnson565/profile-generator/issues"
   },
-  "homepage": "https://github.com/elijohnson565/profile-generator#readme"
+  "homepage": "https://github.com/elijohnson565/profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }

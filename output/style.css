@@ -1,0 +1,14 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #ff0000 url(profile-background.jpeg) top center repeat-y; 
+    background-size: 100%; 
+}
+
+.employeeCard{
+    margin: 10px;
+    box-shadow: -3px 3px rgb(70, 66, 66);
+}
+
