@@ -1,8 +1,6 @@
-// create the team
-const generateTeam = team => {
+const createProfiles = team => {
 
-    // create the manager html
-    const generateManager = manager => {
+    const createManagerProfile = manager => {
         return `
         <div class="card employeeCard">
         <div class="card-header">
@@ -20,8 +18,7 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for engineers
-    const generateEngineer = engineer => {
+    const createEngineerProfile = engineer => {
         return `
         <div class="card employeeCard">
     <div class="card-header">
@@ -39,8 +36,7 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for interns
-    const generateIntern = intern => {
+    const createInternProfile = intern => {
         return `
         <div class="card employeeCard">
     <div class="card-header">
@@ -58,24 +54,24 @@ const generateTeam = team => {
         `;
     };
 
-    const html = [];
+    const newHtmlFile = [];
 
-    html.push(team
+    newHtmlFile.push(team
         .filter(employee => employee.getRole() === "Manager")
-        .map(manager => generateManager(manager))
+        .map(manager => createManagerProfile(manager))
     );
-    html.push(team
+    newHtmlFile.push(team
         .filter(employee => employee.getRole() === "Engineer")
-        .map(engineer => generateEngineer(engineer))
+        .map(engineer => createEngineerProfile(engineer))
         .join("")
     );
-    html.push(team
+    newHtmlFile.push(team
         .filter(employee => employee.getRole() === "Intern")
-        .map(intern => generateIntern(intern))
+        .map(intern => createInternProfile(intern))
         .join("")
     );
 
-    return html.join("");
+    return newHtmlFile.join("");
 
 }
 
@@ -108,7 +104,7 @@ module.exports = team => {
     <div class="container">
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
-                ${generateTeam(team)}
+                ${createProfiles(team)}
             </div>
         </div>
     </div>
